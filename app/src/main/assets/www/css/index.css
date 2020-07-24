@@ -1,0 +1,527 @@
+/* 新版ui界面的css渲染 */
+/* 移动端 */
+* {
+	margin: 0;
+	padding: 0;
+
+	font-size: 26px;
+	font-weight: bold;
+	font-style: normal;
+	font-family: Microsoft YaHei UI;
+
+	color: #00FFFF;
+}
+
+.chat-login-box {
+	box-shadow: 0px 0px 5px #D02129;
+	margin: auto;
+	width: 375px;
+	height: 650px;
+
+	background: linear-gradient(251.46deg, #B83AF3 9.83%, #6950FB 105.7%);
+}
+
+.header {
+	padding-top: 54px;
+
+	line-height: 33px;
+	text-align: center;
+}
+
+.header h1 {
+    color: #D02129;
+}
+
+.content {
+	padding: 0px 35px;
+}
+
+.common-input-info-box {}
+
+.input-notice {
+	border: none;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 19px;
+
+	text-align: center;
+	color: #333333;
+	outline: none;
+}
+
+.input-box {
+	width: 100%;
+
+	font-size: 15px;
+	font-weight: normal;
+
+	color: rgba(255, 255, 255, 0.5);
+	outline: none;
+}
+
+/* placeholder的通用属性 */
+::-webkit-input-placeholder {
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 19px;
+
+	color: #D02129;
+}
+
+.input-notice-box {
+	border-radius: 100px;
+
+	height: 42px;
+
+	text-align: center;
+
+	background: #FFFFFF;
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.input-notice-box-border {
+	border: 1px solid #D02129;
+}
+
+.chooese-avatar-box {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.choose-avatar-box-notice {
+	font-size: 15px;
+}
+
+.common-notice {
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 19px;
+
+	color: #333333;
+}
+
+.error-notice {
+	display: none;
+	font-size: 15px;
+	color: #D02129;
+}
+
+.choose-avatar-content-box {
+	padding-top: 10px;
+}
+
+.choose-avatar-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.extra-margin {
+	border: 4px solid #D02129;
+}
+
+.avatar-box {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: center;
+	min-width: 70px;
+	min-height: 70px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.extra-margin .avatar {
+	box-sizing: border-box;
+	border: 4px solid #FFFFFF;
+}
+
+.avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-blend-mode: normal;
+}
+
+/* 选择聊天室 */
+.choose-chatRoom-list {}
+
+.chatRoom-item {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 16px;
+}
+
+.chatRoom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	box-sizing: border-box;
+	border-radius: 50px;
+
+	margin: 0px 8px 16px 0px;
+	width: 144px;
+	min-width: 144px;
+	height: 50px;
+
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 17px;
+
+	cursor: pointer;
+	background: #D02129;
+	color: #FFFFFF;
+}
+
+.chatRoom:hover {
+	border: 3px solid #FFFFFF;
+}
+
+.chatRoom-margin-right {
+	margin-right: 12px;
+}
+
+/* 聊天室样式 */
+.chatRoom-box {
+	box-shadow: 0px 0px 5px #D02129;
+	display: none;
+	position: relative;
+	margin: auto;
+	width: 375px;
+	height: 650px;
+}
+
+.chatRoom-header {
+	width: 100%;
+	height: 65px;
+	line-height: 65px;
+}
+
+.current-chatRoom-icon {
+	float: right;
+	margin-right: 30px;
+}
+
+.icon {
+	border-radius: 20px;
+	width: 24px;
+	height: 24px;
+}
+
+.current-chatRoom-name {
+	padding-left: 30px;
+	text-align: center;
+	color: #D02129;
+}
+
+.chatRoom-content-box {
+	position: absolute;
+	top: 130px;
+
+	width: 100%;
+	height: 450px;
+	overflow-y: scroll;
+}
+
+.online-box {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	padding: 0px 36px 0px 17px;
+}
+
+.online-message {
+	border-radius: 100px;
+	padding: 9px 15px;
+	height: 18px;
+	line-height: 18px;
+	font-size: 14px;
+	font-weight: normal;
+	background: rgba(196, 196, 196, 0.2);
+	color: #D02129;
+}
+
+.user-name {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #D02129;
+}
+
+.user-notice {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #333333;
+}
+
+.current-chatRoom-person {
+	display: flex;
+	margin-bottom: 10px;
+	padding: 0px 36px 0px 17px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+
+.current-person-self-name {
+	display: inline-block;
+	float: right;
+	margin-bottom: 8px;
+
+	font-size: 14px;
+	font-weight: normal;
+
+	line-height: 18px;
+	color: #FFC700;
+}
+
+.current-person-words {
+	border-radius: 100px;
+	padding: 9px 15px;
+	line-height: 18px;
+	font-size: 14px;
+	font-weight: normal;
+	background: rgba(196, 196, 196, 0.2);
+}
+
+.current-person-name {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #D02129;
+}
+
+.current-person-message {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #FFFFFF;
+}
+
+.current-online-num-box {
+	display: flex;
+	flex-direction: row-reverse;
+	padding-right: 30px;
+}
+
+.current-icon {
+	width: 40px;
+	height: 40px;
+}
+
+.current-num {
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+
+	font-size: 14px;
+	font-weight: normal;
+
+	line-height: 40px;
+	text-align: center;
+	background: rgba(51, 51, 51, 0.3);
+	color: rgba(255, 255, 255, 0.8);
+}
+
+
+.current-online-icon {
+	display: flex;
+	position: absolute;
+	right: 70px;
+}
+
+.input-send-box {
+	display: flex;
+	align-items: center;
+	border-radius: 50px;
+	padding-left: 10px;
+	width: 264px;
+	height: 46px;
+
+	font-size: 14px;
+	font-weight: normal;
+	background: rgba(51, 51, 51, 0.1);
+	color: #D02129;
+}
+
+.input {
+	border: none;
+	width: 200px;
+	outline: none;
+	font-weight: normal;
+	font-size: 14px;
+	color: #D02129;
+	background-color: transparent;
+}
+
+.upload-btn {
+	display: flex;
+	align-items: center;
+	border-radius: 100px;
+	margin-right: 6px;
+	width: 36px;
+	height: 36px;
+	background-color: #D02129;
+	justify-content: center;
+}
+
+.heart-btn {
+	min-width: 40px;
+	min-height: 40px;
+}
+
+
+.upload-icon {
+	width: 14px;
+	height: 14px;
+}
+
+.input-btn-box {
+	border-radius: 100px;
+	width: 75px;
+	height: 46px;
+
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 46px;
+	text-align: center;
+	background: linear-gradient(225.79deg, #B83AF3 9.83%, #6950FB 105.7%), #FFFFFF;
+	color: #FFFFFF;
+}
+
+.chatRoom-footer {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0px 17px;
+	padding-bottom: 10px;
+}
+
+/* 火箭与比心 */
+.rocket {
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	right: 50%;
+	margin-left: -20px;
+}
+
+.heart {
+	position: absolute;
+	bottom: 160px;
+	width: 40px;
+	right: 50%;
+	left: 50%;
+	z-index: 10000;
+	margin-left: -20px;
+}
+
+.heart-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-left: 8px;
+}
+
+.heart-btn-icon {
+	width: 40px;
+	height: 40px;
+}
+
+.heart-icon {
+	display: none;
+	width: 48px;
+	height: 39px;
+}
+
+.rocket {
+	display: none;
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	right: 50%;
+	z-index: 10000;
+	margin-left: -40px;
+
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+	text-align: center;
+}
+
+/* 小火箭悬停特效 */
+.rocket:hover {
+	animation: rubberBand 1s;
+}
+
+.rocket-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rocket-btn-icon {
+	padding: 0px 10px;
+	width: 20px;
+	height: 40px;
+}
+
+.rocket-icon {
+	display: none;
+	width: 80px;
+}
+
+.toast{
+	position: fixed;
+	left:50%;
+	top:50%;
+	width:200px;
+	height:100px;
+	background: #f0f0f0;
+	margin:-50px -100px;
+	color:red;
+	display: none;
+	font-size:16px;
+	text-align: center;
+	padding:10px;
+	box-sizing: border-box;
+}
+
+.self-person-color {
+	color: #D02129;
+}
+
+@keyframes rubberBand {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, .95, 1);
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}

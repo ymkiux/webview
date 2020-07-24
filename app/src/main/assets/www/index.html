@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="lib/jquery-3.4.1.min.js"></script>
+		<script src="lib/TweenMax.min.js"></script>
+		<script src="lib/goeasy-im-1.0.9.js"></script>
+		<script src="js/chatservice.js"></script>
+		<script src="js/controller.js"></script>
+	</head>
+	<body>
+		<!-- 群聊登录界面 -->
+		<div class="chat-login-box">
+			<div class="header">
+				<h1>GoEasy示例</h1>
+				<h1>聊天室 (直播间)</h1>
+			</div>
+			<div class="content">
+				<!-- 第一个输入框 -->
+				<div class="input-info-box">
+					<div class="input-notice-box">
+						<input class="input-notice" id="userName" type="text" placeholder="请输入昵称" />
+					</div>
+				</div>
+				<!-- 第二个输入框 -->
+				<div class="chooese-avatar-box">
+					<div class="choose-avatar-box-notice">
+						<span class="common-notice">请选择头像</span>
+						<span class="common-notice error-notice">请选一个头像哦!!! </span>
+					</div>
+					<div class="choose-avatar-content-box">
+						<div class="choose-avatar-content">
+							<div class="avatar-box"  onclick="chooseAvatar(this)">
+								<img class="avatar" src="images/1.png">
+							</div>
+							<div class="avatar-box"  onclick="chooseAvatar(this)">
+								<img class="avatar" src="images/2.png">
+							</div>
+							<div class="avatar-box"  onclick="chooseAvatar(this)">
+								<img class="avatar" src="images/3.png">
+							</div>
+							<div class="avatar-box"  onclick="chooseAvatar(this)">
+								<img class="avatar" src="images/4.png">
+							</div>
+							<div class="avatar-box"  onclick="chooseAvatar(this)">
+								<img class="avatar" src="images/5.png">
+							</div>
+							<div class="avatar-box"  onclick="chooseAvatar(this)">
+								<img class="avatar" src="images/6.png">
+							</div>
+							<div class="avatar-box"  onclick="chooseAvatar(this)">
+								<img class="avatar" src="images/7.png">
+							</div>
+							<div class="avatar-box"  onclick="chooseAvatar(this)">
+								<img class="avatar" src="images/8.png">
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 第三个输入框 -->
+				<div class="chooese-chatRoom-box">
+					<span class="common-notice">请选择聊天室</span>
+					<div class="choose-chatRoom-list">
+						<div class="chatRoom-item">
+							<div class="chatRoom" onclick="login('001')">程序员集散地</div>
+							<div class="chatRoom" onclick="login('002')">舌尖上的中国</div>
+							<div class="chatRoom" onclick="login('003')">驴友之家</div>
+							<div class="chatRoom" onclick="login('004')">球迷乐翻天</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 聊天室界面 -->
+		<div class="chatRoom-box">
+			<!-- 房间名 -->
+			<div class="chatRoom-header" id="chatRoom-header">
+				<div class="current-chatRoom-icon" onclick="leaveRoom()">
+					<img class="icon" src="images/exit.png">
+				</div>
+				<div class="current-chatRoom-name">聊天室名称</div>
+			</div>
+			<div class="current-online-num-box">
+				<!-- 当前在线人数 -->
+				<div class="current-num"></div>
+				<!-- 当前房间的在线人数头像 -->
+			</div>
+			<div class="chatRoom-content-box">
+				<!-- 上下线消息 -->
+				<!-- 发送的消息 -->
+			</div>
+			<div class="chatRoom-footer">
+				<div class="input-send-box">
+					<input class="input" id="message" type="text" placeholder="说点什么" />
+					<div class="upload-btn" onclick="sendMessages(service.room.MessageType.CHAT, '')">
+						<img class="upload-icon" src="images/upload.png"/>
+					</div>
+				</div>
+				<!-- 发送爱心 -->
+				<div class="heart-btn" onclick="sendMessages(service.room.MessageType.PROP, service.room.Prop.HEART)">
+					<img class="heart-btn-icon" src="images/handle-heart.png" />
+				</div>
+				<!-- 发送火箭 -->
+				<div class="rocket-btn" onclick="sendMessages(service.room.MessageType.PROP, service.room.Prop.ROCKET)">
+					<img class="rocket-btn-icon" src="images/rokect.png" />
+				</div>
+			</div>
+			<!-- 火箭和比心 -->
+			<div class="rocket">
+				<img class="rocket-icon" src="images/rokect.png">
+			</div>
+			<div class="heart">
+				<img class="heart-icon" src="images/heart.png">
+				<img class="heart-icon" src="images/heart.png">
+				<img class="heart-icon" src="images/heart.png">
+				<img class="heart-icon" src="images/heart.png">
+				<img class="heart-icon" src="images/heart.png">
+			</div>
+		</div>
+
+		<div class="toast"></div>
+	</body>
+</html>
